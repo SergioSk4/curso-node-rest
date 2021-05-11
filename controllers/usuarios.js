@@ -65,6 +65,7 @@ const usuariosDelete = async(req, res = response) => {
     //Borrar solo actualizando
     const usuario = await Usuario.findByIdAndUpdate(id, { state: false });
     res.json({
+        id,
         usuario
     });
 }
